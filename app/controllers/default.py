@@ -16,8 +16,8 @@ def open_web_cam():
     return render_template("webcam.html")
 
 
-@app.route("/scanner_qr")
+@app.route("/scan")
 def scanner_qr():
-    return render_template("scan_qr.html")
+    return render_template("scanqr.html")
 
 
