@@ -1,6 +1,6 @@
-from flask import render_template, request, send_file
+from flask import render_template, jsonify
 from app import app
-from flask_qrcode import QRcode
+
 
 @app.route("/")
 @app.route("/home")
@@ -11,6 +11,14 @@ def index():
 @app.route("/scan")
 def scanner_qr():
     return render_template("scan.html")
+
+@app.route('/get_config')
+def get_config():
+  api_key = 123456
+  username = 'admin'
+  password = 'admin'
+  config = {'Configs':{'Api_key': api_key, 'Ap_username': username, 'Ap_password': password}}
+  return jsonify(config)  #api needs json format in return
 
 
 
