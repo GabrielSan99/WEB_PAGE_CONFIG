@@ -1,3 +1,4 @@
+import configparser
 from flask import render_template, jsonify
 from app import app
 
@@ -14,11 +15,20 @@ def scanner_qr():
 
 @app.route('/get_config')
 def get_config():
-  api_key = 123456
-  username = 'admin'
-  password = 'admin'
-  config = {'Configs':{'Api_key': api_key, 'Ap_username': username, 'Ap_password': password}}
-  return jsonify(config)  #api needs json format in return
+    cfg = configparser.ConfigParser()
+    cfg.read('/home/gabriel/Documents/WEB_PAGE_CONFIG/config_test.ini')
+    
+    if not cfg['general']['api_key']:
+        api_key = ''
+        username = 'admin'
+        password = 'admin'
+    else:
+        api_key = cfg['general']['api_key']
+        username = 'admin'
+        password = 'admin'
+
+    config = {'Configs':{'Api_key': api_key, 'Ap_username': username, 'Ap_password': password}}
+    return jsonify(config)  #api needs json format in return
 
 
 
@@ -41,6 +51,10 @@ def generate_qr():
 def open_web_cam():
     return render_template("file_save_test.html")
 
+
+@app.route("/test_template")
+def test_template():
+    return render_template("test_template.html")
 
 
 
