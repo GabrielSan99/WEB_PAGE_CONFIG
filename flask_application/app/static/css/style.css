@@ -1,10 +1,10 @@
+@font-face {
+  font-family: BalooBhaijaan2-Regular;
+  src: url('static/font/BalooBhaijaan2-Regular.ttf');
+}
+
 html {
-    background-color: #939393;
-  }
-body {
-  background-color: #939393;
-  margin: 0;
-  
+    background-color: white;
   }
   
   
@@ -15,17 +15,71 @@ body {
   }
   
   .header h2{
-       text-align: center;
-       font-size: 45px;
-       font-weight: bold;
+    text-align: center;
+    font-size: auto;
+    font-weight: bold;
+    color: white;
+    padding-top: 7%;
+  }
+
+  p.ex1 {
+    padding-top: 20%;
   }
   
   .content{
-    height: 70%;
+    height: 75%;
+    background-color: #939393
+    
     
   }
+
+  .content-left{
+    width:50%;
+    height:100%;
+    float:left;     /* ajusta a div à esquerda*/
+    background-color:gainsboro;
+    }
+  
+  .button1{
+    /* display: flex;
+    display: -webkit-flex; */
+    padding-left: 10%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 160%;
+
+  }
+  .button2{
+    padding-left: 10%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+
+  }
+
+  .content-right{
+    width:50%;
+    height:100%;
+    float:left;   
+    background-color: gainsboro;
+    
+    }
+
+  .image{ 
+    
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+
+  }
+
   .footer {
     background-color: #3e5a98;
-    height: 14%;
+    height: 10%;
     width: 100%;
+    
   }
+
+ 

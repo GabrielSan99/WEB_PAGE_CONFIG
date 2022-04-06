@@ -1,23 +1,51 @@
 <html>
-    <meta name="viewport" content="width=device-width,initial-scale=1">    
+    <meta name="viewport" content="width=device-width,initial-scale=1">  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
     <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-
-    <title>Home</title>
     
-    <header> 
+    <head>
+        <title>Home</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/python.png') }}">
+    </head>
+
+    <body>
         <div class="header">	
-            <h2>Quickium</h2>
-          </div>  
-    </header>
-     
-<body>
-    <content> 
+            <h2>Web Qr Scanner Config</h2>
+        </div>
+
+
+        <div class="content">
+            <div class="content-left">
+                <div class="button1">
+                    <a href="https://192.168.0.14:444/scan">
+                        <button type="button" class="btn btn-secondary btn-lg" style="width:100%">Scan QR Code</button>
+                    </a>
+                </div>
+
+                <div class="button2">
+                    <a href="https://192.168.0.14:444/change_AP">
+                        <button type="button" class="btn btn-secondary btn-lg" style="width:100%" >Wifi Config</button>
+                    </a> 
+                </div>
+                       
+                
+                
+                
+                
+            </div>
         
-    </content>
-    <a href="https://192.168.0.14:444/scan">
-        <button type="button" class="btn btn-secondary btn-lg">Scan QR Code</button>
-     </a>
-     
-</body>
+            <div class="content-right">
+                <div class="image">
+                    <img src="static/img/python.png" width="95%">  
+                </div>
+                
+            </div>  
+        
+        </div>
+   
+    </body>
+    
+    <div class="footer"> </div>
+       
 </html>
