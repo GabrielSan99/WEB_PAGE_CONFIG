@@ -13,6 +13,11 @@ def index():
 def scanner_qr():
     return render_template("scan.html")
 
+
+@app.route("/wifi_config")
+def wifi_config():
+    return render_template("wifi_config.html")
+
 @app.route('/get_config')
 def get_config():
     cfg = configparser.ConfigParser()
@@ -34,6 +39,13 @@ def get_config():
 
 
 
+
+
+
+
+
+
+
 @app.route("/hello_world")
 def hello_world():
     return render_template('hello.html')
@@ -44,17 +56,13 @@ def generate_qr():
 
 # @app.route("/webcam")
 # def open_web_cam():
-#     return render_template("webcam.html")
+#    return render_template("webcam.html")
 
 
 @app.route("/file_save_test")
 def open_web_cam():
     return render_template("file_save_test.html")
 
-
-@app.route("/test_template")
-def test_template():
-    return render_template("test_template.html")
 
 
 
