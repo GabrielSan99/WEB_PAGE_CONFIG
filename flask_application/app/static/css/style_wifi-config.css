@@ -24,21 +24,20 @@ html {
     color: white;
   }
 
+  .return_btn{
+    height: 5%;
+    width: 10%;
+    background-color: #939393;
+
+  }
+
   .content{
-    height: 75%;
+    height: 70%;
     width: auto;
     background-color: #939393;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .main_form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75%;
-    width: auto;
   }
 
   .label{
