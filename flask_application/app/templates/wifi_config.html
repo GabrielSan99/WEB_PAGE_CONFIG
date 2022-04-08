@@ -9,17 +9,21 @@
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/python.png') }}">
     </head>
 
+    
+
     <body>
         <div class="header">	
             <h1>Web Qr Scanner Config</h1>
-        </div>
-
-
+        </div>  
+        <a href="http://192.168.0.14:82/home">
+            <button type="button"> <img src="https://bit.ly/3BF9FD7" height ="80" width="100" /></button>
+        </a>
         <div class="content">
+            
             <form style="width:80%; text-align: center;">
 
                 <div class="form-group" style="height: 30%">
-                    <label for="wifi_name">Change Wifi Name</label>
+                    <label for="wifi_name" class="label">Change Wifi Name</label>
                     <input type="name" class="form-control" id="wifi_name" placeholder="Wifi Name">
                 
                     <div class="button">
@@ -27,12 +31,16 @@
                     </div>
                 </div>
                 
-                <hr>
+                <hr style="width: 100%;">
 
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Change Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Current Password">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+                <div class="form-group" style="height: 50%;">
+                    <div>
+                        <label class="label">Change Password</label>
+                        <input type="password" class="form-control" id="current_password" placeholder="Current Password">    
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+                    </div>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm New Password">
 
                     <div class="button">
@@ -46,6 +54,6 @@
    
     </body>
     
-    <div class="footer"> www.python.com</div>
+    <div class="footer">www.python.com</div>
        
 </html>

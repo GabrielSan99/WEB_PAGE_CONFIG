@@ -31,9 +31,25 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
   }
+
+  .main_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: auto;
+  }
+
+  .label{
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    bottom: 5%;
+
+  }
+  
 
   .form{
     width: 80%;
