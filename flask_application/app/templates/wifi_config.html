@@ -31,15 +31,22 @@
                 
                 <hr style="width: 100%;">
 
-                <div class="form-group" style="height: 50%;">
-                    <div>
-                        <label class="label">Change Password</label>
+                <div class="form-group" style="height: 50%; position: relative; top: 20px;">
+                    
+                    <label class="label">Change Password</label>
+                    
+                    <div>    
                         <input type="password" class="form-control" id="current_password" placeholder="Current Password">    
                     </div>
-                    <div>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+
+                    <div style="position: relative; top: 2%">
+                        <input type="password" class="form-control" id="new_password" placeholder="New Password">
                     </div>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm New Password">
+
+                    <div style="position: relative; top: 4%">
+                        <input type="password" class="form-control" id="confirm_new_password" placeholder="Confirm New Password">
+                    </div>
+                   
 
                     <div class="button">
                         <button type="submit" class="btn btn-primary" style="width: 100%" ">Save</button>
@@ -49,14 +56,15 @@
             </form>
         
         </div>
-   
+
     </body>
 
     <div class="return_btn">
         <a href="http://192.168.0.14:82/home">
-            <button type="button" style="border: none; background-color: #939393;"> <img src="static/img/return_2.png" width="50%" style="transform: rotate(180deg);"/></button>
+            <button type="button" style="border: none; background-color: #939393;"> <img src="static/img/return_2.png"  style="transform: rotate(180deg); width: 50px;"/></button>
         </a>
     </div>
+
     
     <div class="footer">www.python.com</div>
        

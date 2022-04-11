@@ -24,15 +24,8 @@ html {
     color: white;
   }
 
-  .return_btn{
-    height: 5%;
-    width: 10%;
-    background-color: #939393;
-
-  }
-
   .content{
-    height: 70%;
+    height: 65%;
     width: auto;
     background-color: #939393;
     display: flex;
@@ -64,6 +57,16 @@ html {
     align-items: center;
     position: relative;
     top:10%;
+  }
+
+
+  .return_btn{
+    height: 10%;
+    width: 20%;
+    background-color: #939393;
+    position: relative;
+    left: 5%;
+
   }
 
   .footer {
