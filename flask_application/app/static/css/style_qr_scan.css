@@ -25,47 +25,43 @@ html {
   }
 
   .content{
-    height: 65%;
+    height: 75%;
     width: auto;
     background-color: #939393;
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .label{
-    font-size: large;
-    font-weight: bold;
-    color: white;
-    position: relative;
-    bottom: 5%;
-
-  }
-  
-
-  .form{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-  .button{
     
+  }
+
+  .reader{
     justify-content: center;
     align-items: center;
-    position: relative;
-    top:10%;
+    width: 65%;
+    height: 70%;
+    position: fixed;
+    left: 17.5%;
+    top:2%;
+  }
+
+  .type_yourself{
+ 
+    height: 30%;
+    width: 80%;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    
   }
 
 
-  .return_btn{
-    height: 10%;
-    width: 20%;
-    background-color: #939393;
+
+  .save_btn{
+
+    width: 90%;
+    height: 8%;
     position: relative;
+    top: 2%;
     left: 5%;
+
 
   }
 
@@ -77,6 +73,8 @@ html {
     justify-content: center;
     align-items: center;
     color: white;
+    position: absolute;
+    bottom: 0%;
     
   }
 

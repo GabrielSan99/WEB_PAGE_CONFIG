@@ -1,40 +1,53 @@
 <html>
-    <head>
-        <title>Qr code Scanner</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <body>
-            <script src="{{ url_for('static', filename='js/html5-qrcode.min.js') }}"></script>
-            <style>
-              .result{
-                background-color: green;
-                color:#fff;
-                padding:20px;
-              }
-              .row{
-                display:flex;
-              }
-            </style>
-            <div class="row">
-              <div class="col">
-                <div style="width:100%;" id="reader"></div>
-              </div>
-              <div class="col" style="padding:50px;">
-                <h4>SCAN RESULT</h4>
-                <div id="result">Result Here...</div>
-              </div>
-            </div>
-            <script type="text/javascript">
-            function onScanSuccess(qrCodeMessage) {
-                document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
-            }
-            function onScanError(errorMessage) {
-              //handle scan error
-            }
-            var html5QrcodeScanner = new Html5QrcodeScanner(
-                "reader", { fps: 10, qrbox: 250 });
-            html5QrcodeScanner.render(onScanSuccess, onScanError);
-            </script>
-        </body>
-    </head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style_qr_scan.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
     
+    <head>
+        <title>Qr Scan</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/python.png') }}">
+    </head>
+
+    <script src="{{ url_for('static', filename='js/html5-qrcode.min.js') }}"></script>
+    
+    <body>
+      
+      <div class="header">	
+        <h1>Web Qr Scanner Config</h1>
+      </div>
+
+      <content class="content">
+            
+        <div class="reader" id="reader"> </div>
+        
+        <div class="type_yourself">
+          <input type="text" class="form-control" id="result" placeholder="Type here or Scan QR"> 
+          <div class="save_btn">
+            <button type="submit" class="btn btn-primary" style="width: 100%" ">Save</button>
+        </div>
+          
+        </div>
+
+  
+        
+      </content>
+    
+          <script type="text/javascript">
+          function onScanSuccess(qrCodeMessage) {
+              document.getElementById('result').innerHTML = qrCodeMessage;
+              alert("Scan Success! \nYour API KEY: " + qrCodeMessage)
+              window.location.href = "http://192.168.0.14:82/home";
+          }
+          function onScanError(errorMessage) {
+            errorMessage;
+          }
+          var html5QrcodeScanner = new Html5QrcodeScanner(
+              "reader", { fps: 10, qrbox: 150 });
+          html5QrcodeScanner.render(onScanSuccess, onScanError);
+          </script>
+
+    </body>
+    <footer class="footer">www.python.com</footer>
+
 </html>
