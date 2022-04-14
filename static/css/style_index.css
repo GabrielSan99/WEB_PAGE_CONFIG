@@ -1,0 +1,77 @@
+@font-face {
+  font-family: BalooBhaijaan2-Regular;
+  src: url('static/font/BalooBhaijaan2-Regular.ttf');
+}
+
+html {
+    background-color: white;
+  }
+  
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3e5a98;
+    height: 15%;
+    width: 100%;
+
+  }
+
+    .header h1{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+
+  .content{
+    height: 75%;
+    width: auto;
+    background-color: #939393;
+    
+    
+  }
+
+  .image{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: 100%;
+    background-color: #939393;
+
+  }
+
+
+
+  .button1{
+ 
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+    width: 90%;
+    height: 8%;
+
+
+  }
+  .button2{
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    width: 90%;
+    height: 8%;
+  }
+
+  .footer {
+    background-color: #3e5a98;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+  }
+
+ 
