@@ -1,0 +1,40 @@
+<html>
+    <meta name="viewport" content="width=device-width,initial-scale=1">  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style_index.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    
+    <body>
+        <h1>Flask Application</h1>
+        <h3>Our Flask Buttons<h3/>
+            <form method="post" action="/">
+                <input type="submit" value="VALUE1" name="action1"/>
+                <input type="submit" value="VALUE2" name="action2" />
+            </form>
+
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value={{message}}>{{message}}</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            </select>
+
+        <select class="form-select" aria-label="Default select examle">
+            <option value={{message}}>{{message}}</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            </select>
+
+        <input type="password">
+        <div>
+            {% for data in data %}
+            <p>1</p>
+            <p>2</p>
+        </div>
+
+
+           
+
+    </body>
+
+</html>

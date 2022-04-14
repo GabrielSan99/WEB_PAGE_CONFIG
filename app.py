@@ -18,6 +18,7 @@ def index():
             pass # unknown
     elif request.method == 'GET':
         
-        return render_template('index.html', message='zibs')
+        return render_template('index.html', 
+        message='zis')
     
     return render_template("index.html", )

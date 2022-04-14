@@ -45,19 +45,25 @@ html {
 
 
 
-  .button1{
+  .ssid{
  
     position: absolute;
-    bottom: 25%;
+    bottom: 28%;
     left: 5%;
     width: 90%;
     height: 8%;
+  }
 
+  .password{
+    position: relative;
+    width:90%;
+    left: 5%;
+    height: 8%;
 
   }
-  .button2{
+  .button_save{
     position: absolute;
-    bottom: 15%;
+    bottom: 12%;
     left: 5%;
     width: 90%;
     height: 8%;
