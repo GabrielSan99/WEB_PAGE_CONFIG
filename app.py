@@ -5,15 +5,11 @@ import os, subprocess
 
 app = Flask(__name__)
 
-data = [1,2,3]
-
 @app.route("/", methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        if request.form.get('action1') == 'VALUE1':
+        if request.form.get('action') == 'save':
             os.system('nmcli r wifi off')
-        elif  request.form.get('action2') == 'VALUE2':
-            os.system('nmcli r wifi on')
         else:
             pass # unknown
     elif request.method == 'GET':
@@ -22,3 +18,25 @@ def index():
         message='zis')
     
     return render_template("index.html", )
+
+
+
+
+
+
+# data = [1,2,3];
+
+# @app.route("/", methods=['GET', 'POST'])
+# def test():
+#     if request.method == 'POST':
+#         if request.form.get('action1') == 'VALUE1':
+#             os.system('nmcli r wifi off')
+#         elif  request.form.get('action2') == 'VALUE2':
+#             os.system('nmcli r wifi on')
+#         else:
+#             pass # unknown
+#     elif request.method == 'GET':
+        
+#         return render_template('test.html')
+    
+#     return render_template("test.html")
